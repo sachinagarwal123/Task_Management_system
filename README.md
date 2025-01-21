@@ -55,6 +55,16 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 CREATE DATABASE taskdb;
 ```
 
+## Start by initializing migrations:
+1. alembic init migrations
+
+## Create the database migration script:
+alembic revision --autogenerate -m "Initial migration"
+
+## run the database migration
+alembic upgrade head
+
+
 ## Running the Application
 
 1. Start the FastAPI server:
@@ -170,28 +180,7 @@ The API returns appropriate HTTP status codes:
 - User-specific task access
 - Environment variables for sensitive data
 
-## Development
 
-The project structure:
-```
-task-management-system/
-├── main.py
-├── models.py
-├── schemas.py
-├── database.py
-├── auth.py
-├── config.py
-├── requirements.txt
-└── .env
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
 
 
 
