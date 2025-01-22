@@ -45,7 +45,6 @@ class TestTaskRouter:
 
     def test_get_task_by_id(self, db_session: Session):
         """Test getting a specific task by ID"""
-        # Create a task first
         task_data = {
             "title": "Get Task Test",
             "description": "Testing get by ID",
@@ -63,7 +62,6 @@ class TestTaskRouter:
 
     def test_update_task(self, db_session: Session):
         """Test updating a task"""
-        # Create a task first
         task_data = {
             "title": "Update Task Test",
             "description": "Testing update",
@@ -124,7 +122,7 @@ class TestTaskRouter:
 
     def test_invalid_status_update(self, db_session: Session):
         """Test updating task with invalid status"""
-        # Create a task first
+       
         task_data = {
             "title": "Invalid Status Test",
             "description": "Testing invalid status",
